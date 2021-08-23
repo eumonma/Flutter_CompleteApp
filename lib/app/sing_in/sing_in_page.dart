@@ -13,6 +13,7 @@ class SingInPage extends StatelessWidget {
     );
   }
 
+  // Prueba Git
   Widget _buildContent() {
     return Padding(
         padding: EdgeInsets.all(16.0),
