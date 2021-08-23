@@ -31,7 +31,17 @@ class SingInPage extends StatelessWidget {
             SizedBox(height: 8.0),
             ElevatedButton(
                 onPressed: () {print('Button pressed'); },
-                child: Text('Sing in with Google'))
+                child: Text('Sing in with Google',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0
+                  ),
+                ),
+  //            style: ElevatedButton.styleFrom(
+  //              primary: Colors.red,
+  //              onPrimary: Colors.yellowAccent
+  //            ),
+            ),
           ],
       ),
     );
