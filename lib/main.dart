@@ -1,4 +1,4 @@
-import 'package:complete_app/app/sing_in/sing_in_page.dart';
+import 'package:complete_app/app/sing_in/sign_in_page.dart';
 import 'package:flutter/material.dart';
 
 
