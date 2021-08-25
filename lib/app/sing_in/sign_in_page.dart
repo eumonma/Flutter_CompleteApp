@@ -1,7 +1,9 @@
 import 'package:complete_app/common_widgets/custom_elevated_button.dart';
 import 'package:complete_app/app/sing_in/sign_in_button.dart';
+import 'package:complete_app/app/sing_in/social_sign_in_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SingInPage extends StatelessWidget {
   @override
@@ -31,27 +33,41 @@ class SingInPage extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            SizedBox(height: 8.0),
-            SignInButton(
-              text: 'Sign in Google',
-              color: Colors.teal,
-              textColor: Colors.white,
+            SizedBox(height: 48.0),
+            SocialSignInButton(
+              assetName: 'images/google-logo.png',
+              text: 'Sign in with Google',
+              color: Colors.white,
+              textColor: Colors.black87,
               onPressed: () {print('Button pressed'); }
             ),
             SizedBox(height: 8.0),
-            CustomElevatedButton(
-              child: Text('Sing in with Facebook',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.yellow,
-                ),
-              ),
-              color: Colors.indigo,
-              borderRadius: 4.0,
-              onPressed: () {print('Button pressed'); },
+            SocialSignInButton(
+                assetName: 'images/facebook-logo.png',
+                text: 'Sign in with Facebook',
+                color: Color(0xFF334D92),
+                textColor: Colors.white,
+                onPressed: () {print('Button pressed'); },
             ),
+            SizedBox(height: 8.0),
+            SignInButton(
+                text: 'Sign in with email',
+                color: Colors.teal,
+                textColor: Colors.white,
+                onPressed: () {print('Button pressed'); },
+            ),
+            SizedBox(height: 8.0),
+            Text('or',
+              style: TextStyle(fontSize: 14, color: Colors.black87),
+              textAlign: TextAlign.center,),
+            SizedBox(height: 8.0),
+            SignInButton(
+                text: 'Go anonymous',
+                color: Color(0xFFDCE755),
+                textColor: Colors.black,
+                onPressed: () {print('Button pressed'); },
+            ),
+            //Image.asset('images/facebook-logo.png'),
           ],
       ),
     );
